@@ -5,25 +5,31 @@
 vengono istanziati almeno due oggetti ‘Movie’
 stampate a schermo i valori delle relative proprietà di ogni oggetto (potete creare un array con dentro le due istanze e fare un ciclo per stampare i dati) */
 
-class Movie {
+require_once __DIR__ .'/assets/php/movie.php';
 
-    public $img;
-    public $title;
-    public $language;
-    public $genre;
-    public $director;
+$animali_fantastici = new Movie(
+    "https://mr.comingsoon.it/imgdb/locandine/235x336/56385.jpg",
+    "Animali Fantastici - I segreti di Silente",
+    2022,
+    "Avventura - Fantasy",
+    "David Yates"
+);
 
-    function __construct($_img, string $_title, string $_language, string $_genre, string $_director){
+$morbius = new Movie(
+    "https://mr.comingsoon.it/imgdb/locandine/235x336/58110.jpg",
+    "Morbius",
+    2022,
+    "Avventura - Azione",
+    "Daniel Espinosa"
+);
 
-        $this->img = $_img;
-        $this->title = $_title;
-        $this->language = $_language;
-        $this->genre = $_genre;
-        $this->director = $_director;
-    }
-}
-
-
+$batman = new Movie(
+    "https://mr.comingsoon.it/imgdb/locandine/235x336/57933.jpg",
+    "The Batman",
+    2022,
+    "Fantasy",
+    "Matt Reeves"
+)
 
 ?>
 
