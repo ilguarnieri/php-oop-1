@@ -7,3 +7,82 @@
 body{
     background-color: #469;
 }
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.movies-wrapper{
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.movie-card{
+    background-color: #eee;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 235px;
+    position: relative;
+    opacity: 0.8;
+    transition: all 250ms linear;
+}
+
+.movie-card:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.movie-info{
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.movie-info >*{
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 655px){
+    .movies-wrapper{
+        gap: 20px;
+    }
+
+    .movie-card{
+        opacity: 1;
+    }
+
+    .movie-info{
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 250ms linear;
+        color: transparent;
+    }
+
+    .movie-info:hover{
+        color: white;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    .movie-genre, .movie-director{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .movies-wrapper{
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
